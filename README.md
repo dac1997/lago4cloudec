@@ -40,7 +40,7 @@ On CentOS 7 with root:
 
 Example build
 
-  docker build --no-cache --build-arg PASS_FOR_LAGO_CORSIKA=<pass> -t lagoecuadorcloudsim https://github.com/caredg/lago_ecuador_cloudsim.git
+  docker build --no-cache --build-arg PASS_FOR_LAGO_CORSIKA=<password> -t lagoecuadorcloudsim https://github.com/dac1997/lago4cloud.git
 
 
 ## Executing a stardandised simulation & analisys to be stored in OneData repositories for LAGO
@@ -62,15 +62,6 @@ sudo docker run --privileged  -e  ONECLIENT_ACCESS_TOKEN="MDAxY2xv...iXm8jowGgo"
                 -e ONECLIENT_PROVIDER_HOST="mon01-tic.ciemat.es" \
                 -it lagocontainer:0.0.1  bash -lc "do_sims_onedata.py -t 10 -u 0000-0001-6497-753X -s sac -k 2.0e2 -h QGSII"
 ```
-
-2. Executing on a multi-processor server
-
-If you count on an standalone server for computing or a virtual machine instantiated with enough procesors memory and disk, you only need add the **-j \<procs\>** param to enable multi-processing:
-
-```sh
-sudo docker run --privileged  -e  ONECLIENT_ACCESS_TOKEN="<personal onedata token>" \
-                -e ONECLIENT_PROVIDER_HOST="<nearest onedata provider>" \
-                -it <container name> bash -lc "do_sims_onedata.py -j <procs> <other ARTI do_* params>"
 ```
 
 Final Purpose is to run on Cloud based servers
