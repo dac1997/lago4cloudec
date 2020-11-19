@@ -29,8 +29,8 @@ RUN cd /opt/corsika-75600-lago && ./coconut -b
 
 #dowload and compile ARTI LAGO crktools
 RUN yum -y install bzip2
-# we use the ones tested with onedataSim package
-RUN cd /opt && git clone https://github.com/lagoproject/arti.git 
+# we use arti package modified for our docker 
+RUN cd /opt && git clone https://github.com/dac1997/arti4docker.git 
 
 #getfacl getfattr 
 RUN yum -y install acl attr 
@@ -45,6 +45,8 @@ RUN pip install xattr
 RUN yum -y install python3 python36-pyxattr
 
 RUN yum -y install gnuplot
+RUN yum -y install screen
+RUN yum -y install emacs
 
 WORKDIR /opt/corsika-75600-lago/run
 #ENTRYPOINT /opt/arti/sims/do_datahub.sh
