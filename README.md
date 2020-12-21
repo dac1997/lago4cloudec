@@ -2,7 +2,7 @@
 ## Description
 
 
-encourages, we started from this package to perform our simulations
+Encouraged, we started from this package to perform our simulations
 
 ## Pre-requisites
 
