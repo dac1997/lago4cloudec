@@ -2,13 +2,13 @@
 ## Description
 
 
-Therefore, we encourage LAGO researchers to use these programs for their simulations. 
+encourages, we started from this package to perform our simulations
 
 ## Pre-requisites
 
 2. Had [Docker](https://www.docker.com/) (or [Singularity](https://singularity.lbl.gov/) or [udocker](https://pypi.org/project/udocker/)) installed on your PC (or HPC/HTC facility) 
 
-It is only needed [Docker Engine](https://docs.docker.com/engine/install/) to run onedataSim container, this is, the *SERVER* mode. However, the *DESKTOP* mode is the only available for Windows and MacOs, it includes the Docker Engine but also more functionalities.  
+
 
 On linux, the recommended way is to remove all docker packages included by default in your distro and to make use of Docker repositories.
 
